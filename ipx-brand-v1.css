@@ -1,0 +1,19 @@
+:root{
+  --ipx-black:#000000;
+  --ipx-white:#FFFFFF;
+  --ipx-orange:#F5793B;
+  --ipx-orange-50:#FFF8F3;
+  --ipx-orange-100:#FFEEE0;
+  --ipx-orange-200:#FFD9BD;
+  --ipx-orange-300:#FFC199;
+  --ipx-orange-400:#FA9D6D;
+  --ipx-orange-500:#F5793B;
+  --ipx-orange-600:#E6592A;
+  --ipx-orange-700:#C4461F;
+  --ipx-orange-800:#9E3617;
+  --ipx-orange-900:#7D2A12;
+  --ipx-font-sans:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --ipx-font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --ipx-space-unit:4px;
+  --ipx-action:linear-gradient(135deg,#F97316,#EF4444,#EC4899);
+}

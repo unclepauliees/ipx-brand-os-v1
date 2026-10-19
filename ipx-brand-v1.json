@@ -1,0 +1,81 @@
+{
+  "version": "1.0",
+  "company": "Intellectual Property Exchange, Inc.",
+  "colors": {
+    "black": "#000000",
+    "white": "#FFFFFF",
+    "orange": "#F5793B",
+    "orangeScale": {
+      "50": "#FFF8F3",
+      "100": "#FFEEE0",
+      "200": "#FFD9BD",
+      "300": "#FFC199",
+      "400": "#FA9D6D",
+      "500": "#F5793B",
+      "600": "#E6592A",
+      "700": "#C4461F",
+      "800": "#9E3617",
+      "900": "#7D2A12"
+    },
+    "webAction": [
+      "#F97316",
+      "#EF4444",
+      "#EC4899"
+    ],
+    "webHighlight": [
+      "#FDBA74",
+      "#F472B6",
+      "#FDE047"
+    ],
+    "logoStroke": [
+      "#EF4136",
+      "#FBB040"
+    ],
+    "publicEcosystem": {
+      "CultureX": [
+        "#FB7185",
+        "#EC4899"
+      ],
+      "LIVEX": [
+        "#FB923C",
+        "#F59E0B"
+      ],
+      "CreatorX": [
+        "#A78BFA",
+        "#6366F1"
+      ],
+      "BrandX": [
+        "#22D3EE",
+        "#0EA5E9"
+      ],
+      "PODX": [
+        "#34D399",
+        "#14B8A6"
+      ],
+      "IPX Studios": [
+        "#FACC15",
+        "#F97316"
+      ]
+    }
+  },
+  "typography": {
+    "sans": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+    "mono": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
+    "weights": {
+      "body": 400,
+      "label": 600,
+      "heading": 700,
+      "display": 900
+    }
+  },
+  "spacing": {
+    "base": 4,
+    "desktopGutter": 24,
+    "mobileGutter": 16
+  },
+  "logo": {
+    "fullMinScreenHeightPx": 33,
+    "iconMinScreenHeightPx": 20,
+    "ipLettersMinPrintHeightMm": 8
+  }
+}
