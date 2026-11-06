@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex, nofollow, noarchive"><meta name="description" content="IPX Brand OS v2: colour, type, look, voice, X account spec, cadence, checklist and downloadable assets.">
+<title>IPX Brand OS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;900&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a black stage. One orange light per section, huge Geist Black headlines, Mono labels, everything else small.
+   Single-theme by choice: the brand's ground is black on every surface. */
+:root{
+  --bg:#000000; --fg:#FFFFFF; --cream:#FCF8ED; --orange:#F5793B; --field:#FD5D01;
+  --red:#EF4136; --amber:#FBB040; --haze:#3B100B; --muted:#A3A3A3; --legal:#9A9A9A; --line:rgba(255,255,255,.14);
+  --display:"Geist",system-ui,-apple-system,sans-serif; --mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--display);font-size:16px;line-height:1.5;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--orange)}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.eyebrow.on{color:var(--orange)}
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:72px 56px}
+.hero::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(180deg,transparent 0 11px,rgba(240,70,54,.10) 11px 13px,transparent 13px 29px),
+  linear-gradient(90deg,transparent 0%,rgba(59,16,11,.9) 45%,rgba(240,70,54,.55) 75%,rgba(250,163,63,.35) 100%);
+  mask-image:linear-gradient(90deg,transparent 30%,#000 100%);-webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 100%);pointer-events:none}
+.hero .wrap{position:relative}
+.mark{display:flex;align-items:center;gap:14px;margin-bottom:56px}
+.mark img{height:44px;width:auto;display:block}
+.hero h1{font-weight:900;font-size:clamp(56px,11vw,132px);line-height:.88;letter-spacing:-.05em;color:var(--cream);max-width:12ch}
+.hero .chip{font-family:var(--mono);font-size:clamp(12px,1.6vw,16px);letter-spacing:.2em;text-transform:uppercase;margin-top:28px}
+.hero .chip span{color:var(--muted);padding:0 .4em}
+.hero p.lead{max-width:60ch;color:var(--muted);margin:28px 0 0;font-size:17px}
+/* sections */
+section{padding-block:64px;border-top:1px solid var(--line)}
+section h2{font-weight:900;font-size:clamp(34px,5vw,56px);letter-spacing:-.04em;line-height:.95;color:var(--cream);margin:10px 0 18px}
+section>.wrap>p.sum{max-width:62ch;font-size:19px;font-weight:500;letter-spacing:-.01em;margin:0 0 32px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-align:left;font-weight:500;padding:0 14px 10px 0;border-bottom:1px solid var(--line)}
+td{padding:14px 14px 14px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{font-weight:600;white-space:nowrap}
+.tbl{overflow-x:auto}
+/* colour */
+.swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.sw{aspect-ratio:1/1.15;max-width:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;border:1px solid var(--line)}
+.sw b{font-size:15px;display:block}.sw code{font-family:var(--mono);font-size:12px;opacity:.85}
+.sw.black{background:#000}.sw.orange{background:#F5793B;color:#000;border-color:#F5793B}.sw.red{background:#EF4136;color:#000;border-color:#EF4136}.sw.amber{background:#FBB040;color:#000;border-color:#FBB040}.sw.white{background:#fff;color:#000;border-color:#fff}
+.sw.grad{background:linear-gradient(90deg,#EF4136,#FBB040);color:#000;border-color:transparent}
+.rules{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:10px;max-width:70ch}
+.rules li{padding-left:22px;position:relative}
+.rules li::before{content:"";position:absolute;left:0;top:.6em;width:12px;height:3px;background:linear-gradient(90deg,var(--red),var(--amber))}
+/* type specimens */
+.spec{border:1px solid var(--line);padding:22px;display:grid;gap:12px;min-width:0}
+.spec .eyebrow{margin-bottom:4px}
+.spec .big{font-weight:900;font-size:clamp(40px,6vw,72px);line-height:.88;letter-spacing:-.05em;color:var(--cream)}
+.spec .pay{font-weight:500;font-size:26px;letter-spacing:-.01em}
+.spec .mono{font-family:var(--mono);letter-spacing:.2em;text-transform:uppercase;font-size:14px}
+.spec p{margin:0;color:var(--muted);font-size:14px}
+/* look */
+.refs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:28px}
+.refs figure{margin:0;min-width:0}.refs img{width:100%;display:block;max-width:100%}
+.refs figcaption{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.refs figure.wide{grid-column:1/-1}
+/* voice */
+.dd{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.dd div{border:1px solid var(--line);padding:22px;min-width:0}
+.dd h3{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px}
+.dd .do h3{color:var(--orange)}.dd .dont h3{color:var(--muted)}
+.dd ul{margin:0;padding-left:0;list-style:none;display:grid;gap:8px}
+.dd .do li::before{content:"✓  ";color:var(--orange)}.dd .dont li::before{content:"✕  ";color:var(--muted)}
+.lines{display:grid;gap:0;margin-top:32px;border-top:1px solid var(--line)}
+.lines div{display:grid;grid-template-columns:1fr auto;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.lines b{font-weight:600}.lines span{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:right}
+/* field band */
+.band{background:var(--field);color:#000;padding-block:56px;margin-top:40px}
+.band h3{font-weight:900;font-size:clamp(44px,8vw,96px);line-height:.88;letter-spacing:-.05em;color:#fff}
+.band p{margin:18px 0 0;font-weight:500;font-size:18px;max-width:52ch}
+.band .foot{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-top:36px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* checklist */
+.check{list-style:none;padding:0;margin:0;display:grid;gap:0;max-width:70ch}
+.check li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.check li::before{content:"";flex:0 0 18px;height:18px;border:1.5px solid var(--orange);margin-top:3px}
+/* assets */
+.assets{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.asset{border:1px solid var(--line);display:flex;flex-direction:column;min-width:0}
+.asset .thumb{aspect-ratio:16/10;max-width:100%;background:#0a0a0a;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line)}
+.asset .thumb img{width:100%;height:100%;object-fit:contain;display:block}
+.asset .thumb.type span{font-weight:900;font-size:72px;letter-spacing:-.05em;color:var(--cream);line-height:1}
+.asset .thumb.tokens{gap:0}.asset .thumb.tokens i{flex:1;height:100%;display:block}
+.asset .meta{padding:16px 16px 8px;display:grid;gap:4px;flex:1}
+.asset .meta b{font-weight:600;font-size:15px}.asset .meta span{color:var(--muted);font-size:13px}
+.asset .dl{display:block;text-align:center;text-decoration:none;margin:8px 16px 16px;appearance:none;border:0;background:var(--orange);color:#000;font:600 14px/1 var(--display);letter-spacing:.01em;padding:12px 16px;cursor:pointer;border-radius:8px;transition:filter .15s}
+.asset .dl:hover{filter:brightness(1.08)}.asset .dl:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+footer{padding-block:40px 56px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.legal{color:var(--legal);font-size:13px;max-width:70ch;margin-top:28px}
+@media (prefers-reduced-motion:no-preference){.hero::before{animation:drift 14s linear infinite alternate}@keyframes drift{from{background-position:0 0,0 0}to{background-position:0 18px,0 0}}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="mark"><img src="img/mark.png" alt="IPX mark"><span class="eyebrow on">IPX Brand OS · v2 · Nov 2026</span></div>
+    <h1>A new OS for IP.</h1>
+    <div class="chip">Tokenize<span>·</span>Advertise<span>·</span>Monetize<span>·</span>Distribute</div>
+    <p class="lead">Three colours, one typeface, one CTA. This page is the whole system: how IPX looks, sounds and shows up, for anyone producing on its behalf.</p>
+  </div>
+</header>
+
+<section id="kernel">
+  <div class="wrap">
+    <div class="eyebrow">01 · The kernel</div>
+    <h2>If it needs more than this, it's off-brand.</h2>
+    <div class="tbl"><table>
+      <tr><th>Element</th><th>Rule</th></tr>
+      <tr><td>Positioning line</td><td><b>A New OS for IP.</b> Sentence case, full stop. On the X banner: <b>A NEW OS FOR IP.</b></td></tr>
+      <tr><td>The four verbs</td><td><b>TOKENIZE · ADVERTISE · MONETIZE · DISTRIBUTE</b>, this order, middle dots, under the positioning line.</td></tr>
+      <tr><td>Sign-off</td><td><b>For the fans. For the culture.</b> Bottom-left on posters, last line of hero posts.</td></tr>
+      <tr><td>CTA</td><td><b>ipx.exchange</b>. One link. No Linktree, no "link in bio".</td></tr>
+      <tr><td>Handle</td><td><b>@IPXExchange</b> · display name <b>IPX.Exchange</b></td></tr>
+      <tr><td>The mark</td><td>White <b>IP</b> + gradient <b>X</b> on black. Square, with breathing room. Never redrawn.</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="colour">
+  <div class="wrap">
+    <div class="eyebrow">02 · Colour</div>
+    <h2>Deep black and IPX Orange, lit like a stage. Nothing else.</h2>
+    <div class="swatches">
+      <div class="sw black"><b>IPX Black</b><code>#000000</code><code>Background</code></div>
+      <div class="sw orange"><b>IPX Orange</b><code>#F5793B</code><code>Accent, CTAs</code></div>
+      <div class="sw red"><b>X Red</b><code>#EF4136</code><code>Gradient start</code></div>
+      <div class="sw amber"><b>X Amber</b><code>#FBB040</code><code>Gradient end</code></div>
+      <div class="sw white"><b>White</b><code>#FFFFFF</code><code>Type on black</code></div>
+      <div class="sw grad"><b>The gradient</b><code>#EF4136 → #FBB040</code><code>Logo X · streaks only</code></div>
+    </div>
+    <ul class="rules">
+      <li>Every surface starts black. Atmosphere comes from orange light laid over black, never from a lighter base.</li>
+      <li>The gradient lives in two places: the logo X and the streak texture. Never a button, never a text fill, never a wash. Stops come from the logo master, not from a colour table.</li>
+      <li>Text on orange is <b>black</b>. White on IPX Orange fails contrast at any size.</li>
+      <li>No second accent. No blue, purple, green or grey palettes.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="type">
+  <div class="wrap">
+    <div class="eyebrow">03 · Type</div>
+    <h2>Geist for everything. Three cuts, three jobs.</h2>
+    <p class="sum">The headline is the picture. Everything else on the frame is small.</p>
+    <div class="grid g3">
+      <div class="spec"><div class="eyebrow">Geist Black · headlines</div><div class="big">Fans make culture.</div><p>Huge, tight, 2–5 words, two lines max. Sentence case with a full stop. Caps only on the banner line.</p></div>
+      <div class="spec"><div class="eyebrow">Geist Medium · everything readable</div><div class="pay">For the fans. For the culture.</div><p>Payoffs, body, CTAs, URLs. Never bold a payoff; its contrast with the Black headline is the system.</p></div>
+      <div class="spec"><div class="eyebrow">Geist Mono · small labels</div><div class="mono">Creators. Brands. Communities.</div><p>Verb chip, small-caps footers, legal, DEMO tags. Uppercase, tracked wide.</p></div>
+    </div>
+    <ul class="rules">
+      <li>Don't substitute Inter, Roboto or any other face. Don't mix weights inside a headline. Don't set body in Mono. No serifs anywhere.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="look">
+  <div class="wrap">
+    <div class="eyebrow">04 · The look</div>
+    <h2>One headline. One object or one set of faces. One orange light.</h2>
+    <p class="sum">Squint at the frame. If you see three things, remove one.</p>
+    <div class="refs">
+      <figure><img src="img/keycap.jpg" alt="Fan mode: ON poster, glass keycap on black"><figcaption>Hero object · Fan mode: ON</figcaption></figure>
+      <figure><img src="img/culture.jpg" alt="Fans make culture poster, three orange-lit portraits"><figcaption>Orange field · Fans make culture.</figcaption></figure>
+      <figure><img src="img/voice.jpg" alt="Every fan has a voice poster"><figcaption>Glass object · Every fan has a voice.</figcaption></figure>
+      <figure class="wide"><img src="img/banner.jpg" alt="X banner: A NEW OS FOR IP."><figcaption>X banner · streak field</figcaption></figure>
+    </div>
+    <div class="tbl"><table>
+      <tr><th>Layer</th><th>Rule</th></tr>
+      <tr><td>Texture</td><td>Motion-blur orange streaks across black. Horizontal, one direction per frame. Speed, energy, broadcast.</td></tr>
+      <tr><td>Hero object</td><td>One glossy glass or 3D object as the focal point: keycap, phone, mic, telephone. Orange-lit from the side.</td></tr>
+      <tr><td>People</td><td>Cinematic, orange-lit portraits and silhouettes. Fans shot like the stars. No stock, no laptops.</td></tr>
+      <tr><td>Orange field</td><td>A flat full-bleed orange is the only time orange is a ground. White display type only; body copy goes black.</td></tr>
+      <tr><td>Footer</td><td>Small caps, bottom-left: <b>ipx.exchange</b> and <b>For the fans. For the culture.</b></td></tr>
+      <tr><td>Mark</td><td>Top-left, white, clear space the height of the I.</td></tr>
+    </table></div>
+  </div>
+  <div class="band"><div class="wrap">
+    <h3>Fans make culture.</h3>
+    <p>The orange field in use: white Geist Black display line, black body copy, Mono footer. This is the one surface where orange is the ground.</p>
+    <div class="foot"><span>Creators. Brands. Communities.</span><span>ipx.exchange</span></div>
+  </div></div>
+</section>
+
+<section id="voice">
+  <div class="wrap">
+    <div class="eyebrow">05 · Voice</div>
+    <h2>Very simple. Straightforward. Premium.</h2>
+    <p class="sum">Short sentences. One idea per post. Confident, never loud. Lead with what IPX does, then the proof.</p>
+    <div class="dd">
+      <div class="do"><h3>Do</h3><ul>
+        <li>Write like a premium brand: short, calm, specific</li>
+        <li>Lead with what IPX does, then the proof</li>
+        <li>One clear CTA: ipx.exchange</li>
+        <li>1–2 hashtags max, only when useful</li>
+        <li>Same look on every post: black, orange, Geist</li>
+        <li>Reply daily, in this voice, to mentions and key accounts</li>
+      </ul></div>
+      <div class="dont"><h3>Don't</h3><ul>
+        <li>Hype: "LFG", "let's goooo", rocket strings, ALL CAPS</li>
+        <li>Price talk, "earn", "rewards", "trading", "invest"</li>
+        <li>Funding or valuation numbers, including reposts that quote them</li>
+        <li>Hashtag walls or one-word posts</li>
+        <li>Mixed names for the same thing (Committee / Board / Council)</li>
+      </ul></div>
+    </div>
+    <div class="lines">
+      <div><b>A New OS for IP.</b><span>Everywhere</span></div>
+      <div><b>You're not the audience. You're the cast.</b><span>Launch-week pin</span></div>
+      <div><b>Fans make culture. · Every fan has a voice. · Fan mode: ON</b><span>Posters</span></div>
+      <div><b>For the fans. For the culture.</b><span>Sign-off</span></div>
+      <div><b>Tokenize. Advertise. Monetize. Distribute. A New OS for IP: back the films, shows, music and games you love. Built on Base.</b><span>X bio</span></div>
+    </div>
+    <p class="legal">Token or reward wording ships only with IPX's written approval.</p>
+  </div>
+</section>
+
+<section id="account">
+  <div class="wrap">
+    <div class="eyebrow">06 · The X account</div>
+    <h2>A serious, finished product in five seconds.</h2>
+    <div class="tbl"><table>
+      <tr><th>Element</th><th>Spec</th></tr>
+      <tr><td>Verification</td><td>Gold check (Verified Organization).</td></tr>
+      <tr><td>Profile picture</td><td>Square: IPX mark centred on black with breathing room. 4096 px master.</td></tr>
+      <tr><td>Banner</td><td>Streak banner: <b>A NEW OS FOR IP.</b> + the four verbs, safe for mobile crop.</td></tr>
+      <tr><td>Display name</td><td>IPX.Exchange</td></tr>
+      <tr><td>Bio</td><td>The final bio above. No rewards language.</td></tr>
+      <tr><td>Category · link</td><td>Media &amp; News Company · ipx.exchange</td></tr>
+      <tr><td>Pinned post</td><td>One hero post per phase. Launch week: "You're not the audience. You're the cast."</td></tr>
+      <tr><td>Highlights</td><td>Product · How it works · Press · Launch week</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="cadence">
+  <div class="wrap">
+    <div class="eyebrow">07 · Templates and cadence</div>
+    <h2>7–10 posts a week. Replies daily. One pin per phase.</h2>
+    <p class="sum">Templates: Announcement · Quote card · Explainer (3 frames) · Countdown · Winner card. Formats: 4:5 feed, 16:9 video, 9:16 story.</p>
+    <div class="tbl"><table>
+      <tr><th>Day</th><th>Post</th><th>Format</th></tr>
+      <tr><td>Mon</td><td>Product: what IPX does, one feature</td><td>Design card or 15s demo</td></tr>
+      <tr><td>Tue</td><td>Proof: press, partner, milestone</td><td>Quote card</td></tr>
+      <tr><td>Wed</td><td>Culture: fans, creators, IPs (after IPX announces)</td><td>Poster</td></tr>
+      <tr><td>Thu</td><td>How it works: escrow, launchpad, settlement</td><td>Explainer, 3 frames</td></tr>
+      <tr><td>Fri</td><td>Moment: launch, drop, Space</td><td>Video or countdown</td></tr>
+      <tr><td>Sat / Sun</td><td>Community: fan highlight, recap, question</td><td>Repost with comment, poll</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="check">
+  <div class="wrap">
+    <div class="eyebrow">08 · Before anything posts</div>
+    <h2>Nine checks. A frame that fails one does not post.</h2>
+    <ul class="check">
+      <li>Black ground, one orange light, Geist. Nothing else.</li>
+      <li>Headline 2–5 words, two lines max.</li>
+      <li>One CTA: ipx.exchange.</li>
+      <li>Text on orange is black, not white.</li>
+      <li>No earn / rewards / price / invest / trading / funding / valuation wording.</li>
+      <li>No LFG, rockets, hashtag walls or ALL CAPS (banner line excepted).</li>
+      <li>One name per thing. Campaign: FAN SZN. Points: Aura.</li>
+      <li>Legal on the image where a post touches token, competition or prizes.</li>
+      <li>IPX written approval on any token or reward wording.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="assets">
+  <div class="wrap">
+    <div class="eyebrow">09 · Assets</div>
+    <h2>The basics, approved. Download and use as-is.</h2>
+    <p class="sum">Logo, typeface, banner and the colour tokens. Nothing here gets redrawn, recoloured or retyped.</p>
+    <div class="assets">
+      <div class="asset">
+        <div class="thumb"><img src="img/logo-pack.jpg" alt="IPX mark: white IP with ember brush X on black"></div>
+        <div class="meta"><b>IPX Logo pack</b><span>ZIP · SVG (white, black, mono, X icon) · PNG at 2400 px · square PFP 4096 · Illustrator source</span></div>
+        <a class="dl" href="assets/IPX-Logo-Pack.zip" download>Download logo pack</a>
+      </div>
+      <div class="asset">
+        <div class="thumb"><img src="img/pfp.jpg" alt="IPX square profile picture on black"></div>
+        <div class="meta"><b>Profile picture · square</b><span>PNG · 4096 × 4096 · X, LinkedIn, Instagram avatars. Mark centred on black with breathing room</span></div>
+        <a class="dl" href="assets/IPX-PFP-Square-4096.png" download>Download PNG</a>
+      </div>
+      <div class="asset">
+        <div class="thumb type"><span>Aa</span></div>
+        <div class="meta"><b>Geist + Geist Mono</b><span>ZIP · TTF, static and variable · Vercel, SIL Open Font License · <a href="https://fonts.google.com/specimen/Geist" rel="noopener">also on Google Fonts</a></span></div>
+        <a class="dl" href="assets/IPX-Fonts-Geist.zip" download>Download fonts</a>
+      </div>
+      <div class="asset">
+        <div class="thumb"><img src="img/banner.jpg" alt="IPX X banner"></div>
+        <div class="meta"><b>X banner · A NEW OS FOR IP.</b><span>WEBP · 1920 × 640 · header for X and LinkedIn</span></div>
+        <a class="dl" href="assets/IPX-X-Banner-1920x640.webp" download>Download banner</a>
+      </div>
+      <div class="asset">
+        <div class="thumb tokens"><i style="background:#000"></i><i style="background:#F5793B"></i><i style="background:#EF4136"></i><i style="background:#FBB040"></i><i style="background:#fff"></i></div>
+        <div class="meta"><b>Brand tokens</b><span>JSON · colours, type, approved lines and rules, for design tools and code</span></div>
+        <a class="dl" href="assets/IPX-Brand-Tokens.json" download>Download JSON</a>
+      </div>
+    </div>
+    <p class="legal">Files are served from this repository. Logo masters: Illustrator and SVG in the pack. Fonts: Geist by Vercel, SIL OFL 1.1.</p>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>For the fans. For the culture.</span><span>ipx.exchange</span></div></footer>
+
+
+</body></html>
